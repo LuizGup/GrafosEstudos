@@ -46,11 +46,3 @@ link NOTION: https://www.notion.so/PROJETO-GRAFOS-31111813a50e80e39d29fa0041dba5
 ## Resultados Preliminares
 
 O grafo apresenta uma característica de **Rede Esparsa**, com uma densidade próxima a zero, o que confirma a modelagem real de infraestrutura de internet, onde a conectividade depende de grandes centros de roteamento (Hubs).
-
----
-
-### Próximo passo para você:
-
-Basta criar um arquivo chamado `README.md` na raiz do seu GitHub e colar esse texto.
-
-**Quer que eu te ajude a escrever a parte específica do "Checkpoint 2" para o seu Notion, focando apenas na explicação da Lei de Potência?**
