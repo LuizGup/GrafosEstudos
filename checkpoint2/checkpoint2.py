@@ -126,12 +126,19 @@ def gerar_graficos(k_values, probabilidades, gamma, intercepto, grafo):
     
 def gerar_histograma_graus(graus):
     """Gera histograma da distribuição de graus"""
-    plt.figure(figsize=(10, 6))
-    plt.hist(graus, bins=50, color='#F18F01', alpha=0.7, edgecolor='black')
-    plt.xlabel('Grau do Vértice', fontsize=12)
-    plt.ylabel('Frequência', fontsize=12)
-    plt.title('Histograma da Distribuição de Graus', fontsize=14, fontweight='bold')
-    plt.grid(True, alpha=0.3, axis='y')
+    plt.figure(figsize=(12, 6))
+    
+    # Usar bins logarítmicos para melhor visualização de scale-free
+    max_grau = max(graus)
+    bins = np.logspace(0, np.log10(max_grau), 50)
+    
+    plt.hist(graus, bins=bins, color='#F18F01', alpha=0.7, edgecolor='black')
+    plt.xscale('log')
+    plt.yscale('log')
+    plt.xlabel('Grau do Vértice (escala log)', fontsize=12)
+    plt.ylabel('Frequência (escala log)', fontsize=12)
+    plt.title('Histograma da Distribuição de Graus - Escala Log-Log', fontsize=14, fontweight='bold')
+    plt.grid(True, alpha=0.3, which='both')
     plt.tight_layout()
     plt.savefig('histograma_graus.png', dpi=300, bbox_inches='tight')
     print("✓ Histograma salvo como 'histograma_graus.png'")
