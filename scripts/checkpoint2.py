@@ -1,3 +1,9 @@
+import sys
+from pathlib import Path
+
+# Add parent directory to path so we can import algs4
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -7,7 +13,7 @@ from collections import Counter
 from algs4.graph import Graph
 
 def carregar_projeto():
-    caminho = 'data/projeto_as.txt'
+    caminho = Path(__file__).parent.parent / 'data' / 'projeto_as.txt'
     with open(caminho, 'r') as f:
         v_total = int(f.readline().strip())
         e_total = int(f.readline().strip())
