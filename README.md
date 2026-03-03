@@ -13,8 +13,10 @@ Repositório destinado ao estudo e análise da topologia de redes de Sistemas Au
 ```
 /
 ├── algs4/                          # Classes essenciais da biblioteca algs4-py
-├── data/                           # Arquivos de dados (.txt do SNAP, .dot para Gephi)├── notebooks/
-│   └── apresentacao_grafos_as.ipynb # Notebook único de apresentação (Checkpoint 3)├── scripts/
+├── data/                           # Arquivos de dados (.txt do SNAP, .dot para Gephi)
+├── notebooks/
+│   └── apresentacao_grafos_as.ipynb # Notebook único de apresentação (Checkpoint 3)
+├── scripts/
 │   ├── checkpoint1.py              # Carregamento do grafo e métricas iniciais
 │   ├── checkpoint2.py              # Distribuição de graus com todos os dados
 │   ├── checkpoint2_sem_outliers.py # Distribuição de graus com corte via MLE (powerlaw)
