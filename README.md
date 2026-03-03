@@ -13,8 +13,8 @@ Repositório destinado ao estudo e análise da topologia de redes de Sistemas Au
 ```
 /
 ├── algs4/                          # Classes essenciais da biblioteca algs4-py
-├── data/                           # Arquivos de dados (.txt do SNAP, .dot para Gephi)
-├── scripts/
+├── data/                           # Arquivos de dados (.txt do SNAP, .dot para Gephi)├── notebooks/
+│   └── apresentacao_grafos_as.ipynb # Notebook único de apresentação (Checkpoint 3)├── scripts/
 │   ├── checkpoint1.py              # Carregamento do grafo e métricas iniciais
 │   ├── checkpoint2.py              # Distribuição de graus com todos os dados
 │   ├── checkpoint2_sem_outliers.py # Distribuição de graus com corte via MLE (powerlaw)
@@ -61,10 +61,23 @@ O gráfico log-log revela que o grafo de AS segue uma lei de potência com γ �
 
 ---
 
-### Checkpoint 3 — Notebooks para Apresentação 🔄
+### Checkpoint 3 — Notebooks para Apresentação ✅
 > Desenvolvimento: 26/02 | Entrega: notebooks revisados, com metodologia e resultados consolidados.
 
-> Roteiro: **problema → modelagem → métricas → resultados → conclusão**
+Notebook único em `notebooks/apresentacao_grafos_as.ipynb` seguindo o roteiro:
+
+**problema → modelagem → métricas → resultados → conclusão**
+
+| Seção | Conteúdo |
+|---|---|
+| O Problema | Contexto da rede de AS, dataset SNAP AS-733 |
+| Modelagem | Estrutura do arquivo, grafo não-dirigido, biblioteca algs4 |
+| Métricas Iniciais | V, E, grau médio, densidade, grau máximo/mínimo |
+| Componentes Conexas | DFS via CC, BFS manual para distâncias |
+| Distribuição de Graus | Histograma, PMF linear, PMF log-log sem ajuste |
+| Ajuste Power-Law | MLE via `powerlaw`, xmin=8, γ≈2.148, comparação com lognormal |
+| Painel Visual | Subplots com as 3 visualizações lado a lado |
+| Conclusão | Tabela de resultados, implicações práticas, referências |
 
 ---
 
