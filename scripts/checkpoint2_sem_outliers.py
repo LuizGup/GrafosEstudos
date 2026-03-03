@@ -197,7 +197,7 @@ def main():
     print(f"  • Desvio padrão: {np.std(data):.4f}")
     print(f"  • Mediana: {np.median(data):.1f}")
 
-    print("\n☑️ AJUSTE DE LEI DE POTÊNCIA (powerlaw / MLE) — modelo do professor:")
+    print("\n☑️ AJUSTE DE LEI DE POTÊNCIA (powerlaw / MLE):")
     print(f"  • alpha (expoente): {alpha:.4f}")
     print(f"  • xmin (ponto de corte): {xmin:.1f}")
 
