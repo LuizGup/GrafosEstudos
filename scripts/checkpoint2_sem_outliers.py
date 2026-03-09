@@ -46,15 +46,6 @@ def calcular_graus(grafo):
 # 3) Ajuste powerlaw (modelo do professor)
 # =========================
 def ajuste_powerlaw(graus):
-    """
-    Modelo do professor:
-
-    data = array([...])
-    results = powerlaw.Fit(data)
-    print(results.power_law.alpha)
-    print(results.power_law.xmin)
-    R, p = results.distribution_compare('power_law', 'lognormal')
-    """
     data = np.array(graus, dtype=float)
     data = data[data > 0]
 
