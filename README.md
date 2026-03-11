@@ -1,10 +1,48 @@
-# GrafosEstudos
-# Projeto de Teoria dos Grafos: Autonomous Systems (AS)
+# T1 — Grafos de Escala Livre com Dados do SNAP
 
-Repositório destinado ao estudo e análise da topologia de redes de Sistemas Autônomos da Internet, utilizando a biblioteca `algs4-py`.
+Análise da topologia de redes de Sistemas Autônomos da Internet utilizando o dataset AS-733 do Stanford SNAP.
 
-- **Dataset:** [SNAP — AS-733](https://snap.stanford.edu/data/as-733.html)
-- **Notion:** [Página do Projeto](https://www.notion.so/PROJETO-GRAFOS-31111813a50e80e39d29fa0041dba56f?source=copy_link)
+**Disciplina:** Resolução de Problemas em Grafos — Universidade de Fortaleza  
+**Professor:** Prof. Me. Ricardo Carubbi
+
+**Equipe:**
+- Luiz Carlos Monteiro Lopes Neto | 2410410
+- Ricardo André Rodrigues Bandeira | 2417200
+- João Isaías Ribeiro de Oliveira Alves | 2310283
+
+**Dataset:** [SNAP — AS-733](https://snap.stanford.edu/data/as-733.html)
+
+---
+
+## Como Reproduzir a Análise
+
+### Pré-requisitos
+- Python 3.9 ou superior
+- Git
+
+### Passos
+
+```bash
+# 1. Clonar o repositório
+git clone https://github.com/LuizGup/GrafosEstudos.git
+cd GrafosEstudos
+
+# 2. Instalar as dependências
+pip install -r requirements.txt
+
+# 3. Abrir o notebook principal
+jupyter notebook notebooks/apresentacao_grafos_as.ipynb
+```
+
+> O notebook já inclui o dataset em `data/projeto_as.txt` — nenhum download adicional é necessário.
+
+Para executar os scripts individuais de cada checkpoint:
+
+```bash
+python scripts/checkpoint1.py
+python scripts/checkpoint2.py
+python scripts/checkpoint2_sem_outliers.py
+```
 
 ---
 
@@ -12,18 +50,22 @@ Repositório destinado ao estudo e análise da topologia de redes de Sistemas Au
 
 ```
 /
-├── algs4/                          # Classes essenciais da biblioteca algs4-py
-├── data/                           # Arquivos de dados (.txt do SNAP, .dot para Gephi)
+├── algs4/                               # Implementação das estruturas algs4-py (Sedgewick & Wayne)
+├── data/
+│   ├── projeto_as.txt                   # Dataset AS-733 (SNAP): 6.474 vértices, 13.895 arestas
+│   └── grafo_projeto.dot                # Exportação para visualização no Gephi
 ├── notebooks/
-│   └── apresentacao_grafos_as.ipynb # Notebook único de apresentação (Checkpoint 3)
+│   └── apresentacao_grafos_as.ipynb     # Notebook principal — análise completa
 ├── scripts/
-│   ├── checkpoint1.py              # Carregamento do grafo e métricas iniciais
-│   ├── checkpoint2.py              # Distribuição de graus com todos os dados
-│   ├── checkpoint2_sem_outliers.py # Distribuição de graus com corte via MLE (powerlaw)
-│   └── GERAR_DOT.py               # Exportação para Gephi (.dot)
-├── distribuicao_graus.png          # Gráfico de distribuição (linear + log-log, com outliers)
-├── distribuicao_graus_sem_outliers.png  # Gráfico de distribuição sem outliers (MLE, xmin=8)
-└── histograma_graus.png            # Histograma de frequências de grau
+│   ├── checkpoint1.py                   # Carregamento do grafo e métricas iniciais
+│   ├── checkpoint2.py                   # Distribuição de graus com todos os dados
+│   ├── checkpoint2_sem_outliers.py      # Distribuição de graus via MLE (powerlaw, xmin=8)
+│   └── GERAR_DOT.py                     # Exportação do grafo para Gephi (.dot)
+├── distribuicao_graus_linear.png        # Gráfico PMF em escala linear
+├── distribuicao_graus_loglog.png        # Gráfico PMF em escala log-log
+├── distribuicao_graus_sem_outliers.png  # Gráfico com ajuste MLE (xmin=8)
+├── histograma_graus_linear.png          # Histograma de frequências de grau
+└── requirements.txt                     # Dependências Python
 ```
 
 ---
